@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "1!";
+const prefix = "2!";
 /////////////////////////
 ////////////////////////
 
@@ -318,10 +318,10 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '1!help') {
+    if (message.content === '2!help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت !1**')
+        .setDescription('**برفكس البوت !2**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
@@ -348,7 +348,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    var prefix = "1!"
+    var prefix = "2!"
 if (message.content.startsWith(prefix + "uptime")) {
    let uptime = client.uptime;
 
@@ -392,12 +392,11 @@ if (message.content.startsWith(prefix + "uptime")) {
 });
 
 client.on('ready', () => {
-  client.user.setGame(` 1!help .`,'');
+  client.user.setGame(` 2!help .`,'https://www.twitch.tv/v5bz');
   console.log('---------------');
   console.log('Desert Bot Is Online')
   console.log('---------------')
 });
-
 
 
 
